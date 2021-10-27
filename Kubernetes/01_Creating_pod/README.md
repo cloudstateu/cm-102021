@@ -1,4 +1,4 @@
-<img src="../../../img/logo.png" alt="Chmurowisko logo" width="200" align="right">
+<img src="./img/logo.png" alt="Chmurowisko logo" width="200" align="right">
 <br><br>
 <br><br>
 <br><br>
@@ -10,7 +10,6 @@
 #### In this lab you will create a Kubernetes pod
 
 ## Task 1: Checking kubectl and cluster status
-
 
 1. Open a terminal of your choice.
 2. Type ``kubectl version`` and press **Enter**.

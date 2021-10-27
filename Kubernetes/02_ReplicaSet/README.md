@@ -1,4 +1,4 @@
-<img src="../../../img/logo.png" alt="Chmurowisko logo" width="200" align="right">
+<img src="./img/logo.png" alt="Chmurowisko logo" width="200" align="right">
 <br><br>
 <br><br>
 <br><br>
@@ -15,40 +15,46 @@ In this lab you will work with a ReplicaSet
 1. In terminal type `kubectl create -f rs.yaml` and press enter.
 1. Using `kubectl get pods`, check if Kubernetes created a new pod.
 
-![img](./img/replicaset1.png)
+    ![img](./img/replicaset1.png)
 
 ## Task 2: Inspecting ReplicaSet and its behaviour
 
 1. Execute following command:
 
-   ```bash
-   kubectl describe rs frontend
-   ```
+    ```bash
+    kubectl describe rs frontend
+    ```
 
-   ![img](./img/replicaset2.png)
+    ![img](./img/replicaset2.png)
 
-   You can see the label selector for the ReplicaSet, as well as the state of all of the replicas managed by the ReplicaSet.
+    You can see the label selector for the ReplicaSet, as well as the state of all of the replicas managed by the ReplicaSet.
 
 1. Once again get a list of pods inside the replica `kubectl get pods -l app=frontend`
 1. Execute the following command `kubectl delete pod <POD-NAME>` but replace _<POD-NAME>_ with one of the pod's name, i.e.: `kubectl delete pod frontend-z5bwf`.
 1. Get a list of pods `kubectl get pods -l app=frontend`
 
-   ![img](./img/replicaset3.png)
+    ![img](./img/replicaset3.png)
 
-   As you can see, ReplicaSet still have 3 running pods.
+    As you can see, ReplicaSet still have 3 running pods.
 
 ## Task 3: Scaling ReplicaSet
 
 You can scale ReplicaSet using declarative way by changing manifest file. But you can also do it imperative way.
 
 1. Execute following command:
-   `kubectl scale replicaset frontend --replicas=5`
+
+    ```bash
+    kubectl scale replicaset frontend --replicas=5
+    ```
+
 2. Get a list of pods `kubectl get pods -l app=frontend`
-   ![img](./img/replicaset4.png)
-   Now you should have 5 pods running inside ReplicaSet.
+
+    ![img](./img/replicaset4.png)
+
+    Now you should have 5 pods running inside ReplicaSet.
 
 ## END LAB
 
 <br><br>
 
-<center><p>&copy; 2019 Chmurowisko Sp. z o.o.<p></center>
+<center><p>&copy; 2021 Chmurowisko Sp. z o.o.<p></center>
