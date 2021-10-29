@@ -1,4 +1,4 @@
-<img src="./img/logo.png" alt="Chmurowisko logo" width="200" align="right">
+<img src="../../../img/logo.png" alt="Chmurowisko logo" width="200" align="right">
 <br><br>
 <br><br>
 <br><br>
@@ -7,22 +7,27 @@
 
 ## LAB Overview
 
-#### In this lab you will create a Kubernetes pod
+In this lab you will create a Kubernetes pod
 
 ## Task 1: Checking kubectl and cluster status
 
-1. Open a terminal of your choice.
-2. Type ``kubectl version`` and press **Enter**.
-You should get an output similiar to:
+1. Open Cloud Shell and check `kubectl` version:
 
-``Client Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.3", GitCommit:"5e53fd6bc17c0dec8434817e69b04a25d8ae0ff0", GitTreeState:"clean", BuildDate:"2019-06-06T01:44:30Z", GoVersion:"go1.12.5", Compiler:"gc", Platform:"darwin/amd64"}
-Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCommit:"96fac5cd13a5dc064f7d9f4f23030a6aeface6cc", GitTreeState:"clean", BuildDate:"2019-08-19T11:05:16Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
-``
+    ```bash
+    kubectl version
+    ```
 
-3. To check if there are any nodes available, eype ``kubectl get nodes`` and press **Enter**.
+    If `kubectl` is installed correctly you should get output similiar to:
+
+    ```bash
+    Client Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.2", GitCommit:"8b5a19147530eaac9476b0ab82980b4088bbc1b2", GitTreeState:"clean", BuildDate:"2021-09-15T21:38:50Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
+    Server Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.9", GitCommit:"8dc42052754bfacb111a0426830122dd9cc9cfa0", GitTreeState:"clean", BuildDate:"2021-08-31T00:01:04Z", GoVersion:"go1.15.14", Compiler:"gc", Platform:"linux/amd64"}
+    ```
+
+1. To check if there are any nodes available, eype ``kubectl get nodes`` and press **Enter**.
 You should get at least one node.
 
-## Task 2. Creating a pod.
+## Task 2. Creating a pod
 
 In this task you will create your simple pod using CLI.
 
